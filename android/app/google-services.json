@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "763760692503",
+    "project_id": "pushnoti-debc3",
+    "storage_bucket": "pushnoti-debc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763760692503:android:eb36a29fe4e230e42e7b52",
+        "android_client_info": {
+          "package_name": "com.m.shasho.the.ecommerce_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763760692503-cmpjagdbo8b6l2kbp1evng0flm5ml4gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuoNH1c8Rzzp-roDGknwju5_2P6bSk-ZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763760692503-cmpjagdbo8b6l2kbp1evng0flm5ml4gt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
