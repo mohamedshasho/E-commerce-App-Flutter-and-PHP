@@ -8,7 +8,6 @@ class ShimmerList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var mqHeight = MediaQuery.of(context).size.height;
-    var mqWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: isListView
           ? ListView.builder(

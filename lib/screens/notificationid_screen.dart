@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/data/language_provider.dart';
 import 'package:ecommerce_app/data/notification_provider.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

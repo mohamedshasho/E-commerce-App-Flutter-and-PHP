@@ -1,8 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ecommerce_app/constants.dart';
 import 'package:ecommerce_app/data/language_provider.dart';
 import 'package:ecommerce_app/data/product_Provider.dart';
-import 'package:ecommerce_app/model/app_api.dart';
 import 'package:ecommerce_app/model/products.dart';
 import 'package:ecommerce_app/screens/products_page.dart';
 import 'package:ecommerce_app/screens/search_screen.dart';
@@ -11,7 +8,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:provider/provider.dart';
-import 'package:shimmer/shimmer.dart';
 import '../componants/item_gridview.dart';
 
 class ProductHome extends StatelessWidget {
@@ -21,7 +17,6 @@ class ProductHome extends StatelessWidget {
   Widget build(BuildContext context) {
     var lan = Provider.of<LanguageProvider>(context);
     var mqHeight = MediaQuery.of(context).size.height;
-    var mqWidth = MediaQuery.of(context).size.width;
     return Directionality(
       textDirection: lan.isEn ? TextDirection.ltr : TextDirection.rtl,
       child: Scaffold(
@@ -85,10 +80,9 @@ class ProductHome extends StatelessWidget {
               Container(
                 height: mqHeight * 0.4,
                 width: double.infinity,
-                child: Selector<ProviderProducts, List<Products>>(
-                  selector: (ctx, val) => val.getProducts,
+                child: Consumer<ProviderProducts>(
                   builder: (ctx, value, child) {
-                    List<Products> pro = value;
+                    List<Products> pro = value.getProducts;
                     if (pro.isEmpty)
                       return ShimmerList(
                         isListView: false,
@@ -114,10 +108,9 @@ class ProductHome extends StatelessWidget {
               Container(
                 height: mqHeight * 0.4,
                 width: double.infinity,
-                child: Selector<ProviderProducts, List<Products>>(
-                  selector: (ctx, val) => val.getProducts,
+                child: Consumer<ProviderProducts>(
                   builder: (ctx, value, child) {
-                    List<Products> pro = value;
+                    List<Products> pro = value.getProducts;
                     if (pro.isEmpty)
                       return ShimmerList(
                         isListView: false,

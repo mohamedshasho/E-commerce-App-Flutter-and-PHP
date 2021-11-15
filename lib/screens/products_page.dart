@@ -1,8 +1,7 @@
 import 'package:ecommerce_app/data/language_provider.dart';
 import 'package:ecommerce_app/data/product_Provider.dart';
 import 'package:ecommerce_app/data/provider_categories.dart';
-import 'package:ecommerce_app/model/categories.dart';
-import 'package:ecommerce_app/model/products.dart';
+
 import 'package:ecommerce_app/wedgets/filter_bottom_sheet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +15,6 @@ class ProductsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var lan = Provider.of<LanguageProvider>(context);
     print('re build category page');
-    List<Categories> categories = [];
-    List<Products> products;
     return SafeArea(
       child: Directionality(
         textDirection: lan.isEn ? TextDirection.ltr : TextDirection.rtl,
@@ -27,8 +24,7 @@ class ProductsScreen extends StatelessWidget {
             actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.filter_list),
-                onPressed: () async {
-                  categories = context.read<ProviderCategories>().categories;
+                onPressed: () {
                   showModalBottomSheet(
                     elevation: 5.0,
                     context: context,
@@ -36,7 +32,8 @@ class ProductsScreen extends StatelessWidget {
                       ctx,
                     ) {
                       return FilterBottomSheet(
-                        categories: categories,
+                        categories:
+                            context.read<ProviderCategories>().categories,
                       );
                     },
                   );

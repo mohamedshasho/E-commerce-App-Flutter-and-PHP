@@ -15,7 +15,6 @@ class BuildColumnSliver extends StatelessWidget {
   Widget build(BuildContext context) {
     var lan = Provider.of<LanguageProvider>(context);
     var mqHeight = MediaQuery.of(context).size.height;
-    var mqWidth = MediaQuery.of(context).size.width;
 
     String getCategory(String index) {
       List<Categories> category =

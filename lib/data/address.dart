@@ -14,7 +14,7 @@ class AddressConnect {
       address = Address.fromJson(body);
       return address;
     } else {
-      print('error');
+      throw "error";
     }
   }
 }

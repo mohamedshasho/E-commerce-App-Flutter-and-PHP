@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/data/language_provider.dart';
 import '../data/product_Provider.dart';
-import '../data/provider_categories.dart';
 import '../data/search_provider.dart';
 import '../model/products.dart';
 import '../screens/details_products.dart';

@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecommerce_app/data/product_Provider.dart';
-import 'package:ecommerce_app/data/provider_categories.dart';
 import 'package:ecommerce_app/model/app_api.dart';
 import 'package:ecommerce_app/model/products.dart';
 import 'package:ecommerce_app/screens/details_products.dart';

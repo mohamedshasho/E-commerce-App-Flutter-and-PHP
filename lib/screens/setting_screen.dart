@@ -15,7 +15,6 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var lan = Provider.of<LanguageProvider>(context);
-    var auth = Provider.of<LanguageProvider>(context);
     var height = MediaQuery.of(context).size.height;
     return Directionality(
       textDirection: lan.isEn ? TextDirection.ltr : TextDirection.rtl,

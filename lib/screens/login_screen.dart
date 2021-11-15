@@ -1,8 +1,4 @@
-import 'dart:convert';
-
 import 'package:ecommerce_app/data/language_provider.dart';
-import 'package:ecommerce_app/model/app_api.dart';
-import 'package:http/http.dart' as http;
 import 'package:ecommerce_app/data/auth_provider.dart';
 import 'package:ecommerce_app/data/user_preferences.dart';
 import 'package:ecommerce_app/data/user_provider.dart';
@@ -10,7 +6,6 @@ import 'package:ecommerce_app/model/user.dart';
 import 'package:ecommerce_app/screens/register_screen.dart';
 import 'package:ecommerce_app/wedgets/validate_email.dart';
 import 'package:ecommerce_app/wedgets/wedgets_auth.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -47,10 +42,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     var lan = Provider.of<LanguageProvider>(context);
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
     AuthProvider auth = Provider.of<AuthProvider>(context);
-
     final usernameField = TextFormField(
       autofocus: false,
       validator: validateEmail,
